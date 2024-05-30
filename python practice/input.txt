@@ -1,0 +1,7 @@
+ADD-COURSE-OFFERING Math101 JohnSmith 15032024 5 20
+REGISTER john.doe@example.com OFFERING-Math101-JohnSmith
+REGISTER jane.doe@example.com OFFERING-Math101-JohnSmith
+REGISTER alice@example.com OFFERING-Math101-JohnSmith
+ALLOT-COURSE OFFERING-Math101-JohnSmith REG-COURSE-JohnDoe-Math101 john.doe@example.com Math101 JohnSmith 15032024 ACCEPTED
+ALLOT-COURSE OFFERING-Math101-JohnSmith REG-COURSE-JaneDoe-Math101 jane.doe@example.com Math101 JohnSmith 15032024 ACCEPTED
+CANCEL REG-COURSE-JohnDoe-Math101
