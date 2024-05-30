@@ -1,0 +1,82 @@
+<!--<!DOCTYPE html>-->
+<!--<html>-->
+<!--<head>-->
+<!--    <title>Payment</title>-->
+<!--    <style>-->
+<!--        .container {-->
+<!--            max-width: 400px;-->
+<!--            margin: 0 auto;-->
+<!--            padding: 20px;-->
+<!--            border: 1px solid #ccc;-->
+<!--            border-radius: 5px;-->
+<!--        }-->
+<!--        input {-->
+<!--            width: 100%;-->
+<!--            padding: 10px;-->
+<!--            margin-bottom: 10px;-->
+<!--        }-->
+<!--        button {-->
+<!--            width: 100%;-->
+<!--            padding: 10px;-->
+<!--            background-color: #4CAF50;-->
+<!--            color: white;-->
+<!--            border: none;-->
+<!--            cursor: pointer;-->
+<!--        }-->
+<!--    </style>-->
+<!--</head>-->
+<!--<body>-->
+<!--    <div class="container">-->
+<!--        <h2>Payment</h2>-->
+<!--        <form action="/payment" method="post">-->
+<!--            <input type="text" name="cc_number" placeholder="Credit Card Number" required>-->
+<!--            <input type="text" name="cc_exp" placeholder="Expiry Date (MM/YYYY)" required>-->
+<!--            <input type="text" name="cc_cvv" placeholder="CVV" required>-->
+<!--            <button type="submit">Make Payment</button>-->
+<!--        </form>-->
+<!--    </div>-->
+<!--</body>-->
+<!--</html>-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Gateway Demo</title>
+</head>
+<body>
+    <h1>Payment Gateway Demo</h1>
+    <form action="/create_payment" method="post">
+<!--        <label for="amount">Amount:</label>-->
+<!--        <input type="text" id="amount" name="amount" required><br>-->
+<!--        <label for="currency">Currency:</label>-->
+<!--        <input type="text" id="currency" name="currency" required><br>-->
+<!--        <button type="submit">Create Payment</button>-->
+        <label for="amount">Amount:</label>
+        <input type="text" id="amount" name="amount" required><br>
+        <label for="currency">Currency:</label>
+        <input type="text" id="currency" name="currency" required><br>
+        <label for="card_number">Card Number:</label>
+        <input type="text" id="card_number" name="card_number" required><br>
+        <label for="expiry_month">Expiry Month:</label>
+        <input type="text" id="expiry_month" name="expiry_month" required><br>
+        <label for="expiry_year">Expiry Year:</label>
+        <input type="text" id="expiry_year" name="expiry_year" required><br>
+        <label for="cvv">CVV:</label>
+        <input type="text" id="cvv" name="cvv" required><br>
+        <button type="submit">Create Payment</button>
+    </form>
+    <form action="/get_payment" method="get">
+        <label for="payment_id">Payment ID:</label>
+        <input type="text" id="payment_id" name="payment_id" required><br>
+        <button type="submit">Get Payment</button>
+    </form>
+    <form action="/refund_payment" method="post">
+        <label for="refund_amount">Refund Amount:</label>
+        <input type="text" id="refund_amount" name="refund_amount" required><br>
+        <label for="payment-id">Payment ID:</label>
+        <input type="text" id="payment-id" name="payment-id" required><br>
+        <button type="submit">Refund Payment</button>
+    </form>
+</body>
+</html>
